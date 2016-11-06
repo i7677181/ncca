@@ -1,0 +1,109 @@
+﻿Report i7677181 Stiliana Gospodinova
+Swarm System
+
+
+My programming assignment is inspired by Craig Reynolds Flocking Systems.
+I have attempted to develop a GUI based system which simulates swarm-like movement of boid
+agents.
+The program allows for any number of boids to be added to the scene, with collision detection between boids and bounding restrictions if they wander outside of set bounds. It also allows the custom adjustment of the Cohesion, Alignment and Separation behaviours as well as the Speed and Mass forces. Additionally it allows for a single boid to be added to or removed from the swarm. 
+
+
+Here is a brief description of some of the algorithms I have used:
+
+
+Boid Model:
+For the creation of the boid model I have used Jon Macey’s standard Vertex Array Object Boid demo, rather than importing a model object into the program. I have also used the Phong Shader from his demos and slightly modified it by removing the specular and ambient properties.
+I have also set the color of the boid to contrast the black background for better visibility.
+
+
+Movement drives:
+
+
+Velocity vector is the main drive for the boids positions. In order for the boids to actually move initially the velocity value has to be different from 0. For this purpose I have used rand() generator algorithm to randomize the x,y,z values of this vector. Speed and Mass vectors have set values added to them. If a new swarm is generated with low speed and mass values, the swarm will not move.
+
+
+Wander Control and Repositioning-To prevent the boids from disappearing from the screen for too long I have implemented a restriction algorithm. If a boid wanders far outside of it’s bound area (250) it will spawn at it’s origin(0,0,0). This also creates a more dynamic swarm-like appearance.
+
+
+
+
+
+
+
+
+
+
+if(m_position.m_x<=-250 || m_position.m_x>=250)           //if the position of the boid is outside the bounds 
+
+
+ {
+   m_reposition.set(0,0,0);
+   m_position.m_x=m_reposition.m_x;                        // it will be repositioned inside of the bounds
+ }
+ if(m_position.m_y<=-250 || m_position.m_y>=250)
+ {
+     m_reposition.set(0,0,0);
+     m_position.m_y=-(m_reposition.m_y);
+ }
+ if(m_position.m_z<=-250 || m_position.m_z>=250)
+ {
+     m_reposition.set(0,0,0);
+   m_position.m_z=-(m_reposition.m_z);
+ }
+
+
+}
+
+
+For the rotation and direction of the boids a steering force is calculated from the current velocity to the direction.
+
+
+ m_steering = m_direction-m_velocity;
+
+
+
+
+Behaviours:
+Alignment:
+The alignment force is calculated by multiplying it by the neighbour’s velocity
+
+
+for(int i=0;i<m_neighbours.size();++i)
+   {
+     m_alignment+=m_neighbours[i]->getVelocity();
+   }
+   m_alignment *= m_neighbours.size();
+
+
+Cohesion:
+Cohesion force is calculated by averaging  all boids positions within the neighbourhood. If there are no neighbours the cohesion force is set to 0.
+
+
+  m_cohesion = -(m_position+m_neighbours.size())/2;
+
+
+
+
+Separation:
+Separation force is calculated by subtracting all neighbours position from the current boid’s position and averaging the values. A new direction is calculated and added to the separation force.
+
+
+
+
+Math Calculations:
+distance:
+Calculating magnitude of vectors to find neighbours
+To find the distance between a single boid and it’s surrounding boids the position of the selected boid is subtracted from that of the neighbour. If this distance is less than the radius for which the boid searches for its neighbours, the boid is added as a neighbour. If there are no neighbours within the boid’s search radius the cohesion force is set to 0.
+
+
+Collision:
+If a collision has occurred an avoidance force vector is calculated by subtracting the position of the collision from the position of the boid added and it’s velocity, multiplied by the boid’s view range(squared) and its speed (squared).
+
+
+equation:
+m_position+m_velocity*(m_viewRange*2)*(m_speed/2))-m_collisionPos
+
+
+
+Future Goals:
+ Adding a custom obstacle to the scene with collision detection. Changing the colors of the boids over a  set time.

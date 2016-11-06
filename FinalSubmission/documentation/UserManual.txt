@@ -1,0 +1,25 @@
+﻿User Manuel
+For Swarm System
+
+
+After running the program 
+A default simulation should be created.
+Using the middle mouse/scroll button will zoom out/in.
+The left and right mouse buttons will rotate the scene.
+
+
+Cohesion slider: changes the value of the cohesion force.
+In order for the cohesion and other forces to take effect a new Swarm must be created.
+Alignment slider:changes the value of the alignment force.
+Separation slider:changes the value of the separation force.
+Mass slider:changes the value of the mass force.
+Speed slider:increases or decreases the speed of the boids.
+If the speed slider is at it’s lowest point,the boids will not move.
+
+
+Add boid: adds a single boid to the simulation.
+Remove boid: deletes a boid from the simulation.
+
+
+Count:Sets a number of boids to be added to the simulation
+Spawn!: Generates a new simulation from the number of boids that has been set. In order for the boids to move the speed and mass values must be increased.

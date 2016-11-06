@@ -1,0 +1,249 @@
+\hypertarget{classNGLScene}{\section{N\-G\-L\-Scene Class Reference}
+\label{classNGLScene}\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}}
+}
+
+
+this class draws all elements for the swarming simulation  
+
+
+
+
+{\ttfamily \#include $<$N\-G\-L\-Scene.\-h$>$}
+
+Inheritance diagram for N\-G\-L\-Scene\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNGLScene}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNGLScene_a8652734544a0635612103759b4ad5cad}{void \hyperlink{classNGLScene_a8652734544a0635612103759b4ad5cad}{remove\-Boid} ()}\label{classNGLScene_a8652734544a0635612103759b4ad5cad}
+
+\begin{DoxyCompactList}\small\item\em A slot to remove a boid. \end{DoxyCompactList}\item 
+void \hyperlink{classNGLScene_a5e08b4415869e9c4cf73c49c02f33948}{set\-Cohesion} (int \-\_\-cohesion)
+\begin{DoxyCompactList}\small\item\em A slot to set cohesion weight. \end{DoxyCompactList}\item 
+void \hyperlink{classNGLScene_af12eae745b8b0f0b199a98ad4eb59d8c}{set\-Separation} (int \-\_\-separation)
+\begin{DoxyCompactList}\small\item\em A slot to set separation. \end{DoxyCompactList}\item 
+void \hyperlink{classNGLScene_a9f5e5754ca687a66725e5ec05883ec6c}{set\-Alignment} (int \-\_\-align)
+\begin{DoxyCompactList}\small\item\em A slot to set alignment. \end{DoxyCompactList}\item 
+void \hyperlink{classNGLScene_aeb6a3e90a1db49beef452ca4c3b92de7}{set\-Speed} (int \-\_\-speed)
+\begin{DoxyCompactList}\small\item\em A slot to set speed. \end{DoxyCompactList}\item 
+void \hyperlink{classNGLScene_a412a3b478a7a2838f6c5096fbbd20095}{set\-Mass} (int \-\_\-mass)
+\begin{DoxyCompactList}\small\item\em A slot to set mass. \end{DoxyCompactList}\item 
+\hypertarget{classNGLScene_aa25f3abf87cb93d42850b68edbbf6965}{void \hyperlink{classNGLScene_aa25f3abf87cb93d42850b68edbbf6965}{set\-Sep\-Dist} (int \-\_\-sep\-Dist)}\label{classNGLScene_aa25f3abf87cb93d42850b68edbbf6965}
+
+\begin{DoxyCompactList}\small\item\em A slot to set the separation distance for the separation method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNGLScene_a5c5abd9632cc61aa6bfbb8c237d66f27}{N\-G\-L\-Scene} (Q\-Widget $\ast$\-\_\-parent)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classNGLScene}{N\-G\-L\-Scene}. \end{DoxyCompactList}\item 
+\hypertarget{classNGLScene_abda05d130945833bfbb6bad8d619f7f5}{\hyperlink{classNGLScene_abda05d130945833bfbb6bad8d619f7f5}{$\sim$\-N\-G\-L\-Scene} ()}\label{classNGLScene_abda05d130945833bfbb6bad8d619f7f5}
+
+\begin{DoxyCompactList}\small\item\em dtor \end{DoxyCompactList}\item 
+void \hyperlink{classNGLScene_a095aa31c773745194160da96fc5aebe8}{new\-Swarm} (int \-\_\-num\-Boids, int \-\_\-cohesion, int \-\_\-separation, int \-\_\-alignment, float \-\_\-speed, int \-\_\-mass)
+\begin{DoxyCompactList}\small\item\em This method is called to create a new swarm. \end{DoxyCompactList}\item 
+void \hyperlink{classNGLScene_aace337174f906e2ba944d233c9f4f529}{create\-Swarm} (int \-\_\-cohesion, int \-\_\-separation, int \-\_\-alignment, float \-\_\-speed, int \-\_\-mass)
+\begin{DoxyCompactList}\small\item\em A method to add a boid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNGLScene_aab2b866db534d286a56cc2240ed98790}{void \hyperlink{classNGLScene_aab2b866db534d286a56cc2240ed98790}{initialize\-G\-L} ()}\label{classNGLScene_aab2b866db534d286a56cc2240ed98790}
+
+\begin{DoxyCompactList}\small\item\em The following methods must be implimented in the sub class this is called when the window is created //-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---. \end{DoxyCompactList}\item 
+void \hyperlink{classNGLScene_ad08cff2eb790203c04862aee6e5432bd}{resize\-G\-L} (const int \-\_\-w, const int \-\_\-h)
+\begin{DoxyCompactList}\small\item\em this is called whenever the window is re-\/sized \end{DoxyCompactList}\item 
+\hypertarget{classNGLScene_a37bec65bfba7b7a717d803d369221e2d}{void \hyperlink{classNGLScene_a37bec65bfba7b7a717d803d369221e2d}{paint\-G\-L} ()}\label{classNGLScene_a37bec65bfba7b7a717d803d369221e2d}
+
+\begin{DoxyCompactList}\small\item\em this is the main gl drawing routine which is called whenever the window needs to \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this class draws all elements for the swarming simulation 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNGLScene_a5c5abd9632cc61aa6bfbb8c237d66f27}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!N\-G\-L\-Scene@{N\-G\-L\-Scene}}
+\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{N\-G\-L\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}N\-G\-L\-Scene\-::\-N\-G\-L\-Scene (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{\-\_\-parent}
+\end{DoxyParamCaption}
+)}}\label{classNGLScene_a5c5abd9632cc61aa6bfbb8c237d66f27}
+
+
+Constructor for \hyperlink{classNGLScene}{N\-G\-L\-Scene}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-parent} & the parent window to create the G\-L context in \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNGLScene_aace337174f906e2ba944d233c9f4f529}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!create\-Swarm@{create\-Swarm}}
+\index{create\-Swarm@{create\-Swarm}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{create\-Swarm}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::create\-Swarm (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-cohesion, }
+\item[{int}]{\-\_\-separation, }
+\item[{int}]{\-\_\-alignment, }
+\item[{float}]{\-\_\-speed, }
+\item[{int}]{\-\_\-mass}
+\end{DoxyParamCaption}
+)}}\label{classNGLScene_aace337174f906e2ba944d233c9f4f529}
+
+
+A method to add a boid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-cohesion} & the cohesion weight to set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-separation} & the separation weight to set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-alignment} & the alignment weight to set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-speed} & the speed value to set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-mass} & the mass value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNGLScene_a095aa31c773745194160da96fc5aebe8}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!new\-Swarm@{new\-Swarm}}
+\index{new\-Swarm@{new\-Swarm}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{new\-Swarm}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::new\-Swarm (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-num\-Boids, }
+\item[{int}]{\-\_\-cohesion, }
+\item[{int}]{\-\_\-separation, }
+\item[{int}]{\-\_\-alignment, }
+\item[{float}]{\-\_\-speed, }
+\item[{int}]{\-\_\-mass}
+\end{DoxyParamCaption}
+)}}\label{classNGLScene_a095aa31c773745194160da96fc5aebe8}
+
+
+This method is called to create a new swarm. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-num\-Boids} & the numder of boinds in the new swarm \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-cohesion} & the cohesion weight to set to each boid \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-separation} & the separation weight to set to each boid \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-alignment} & the alignment weight to set to each boid \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-speed} & the speed value to set to each boid \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-mass} & the mass value to set to each boid \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNGLScene_ad08cff2eb790203c04862aee6e5432bd}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!resize\-G\-L@{resize\-G\-L}}
+\index{resize\-G\-L@{resize\-G\-L}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{resize\-G\-L}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::resize\-G\-L (
+\begin{DoxyParamCaption}
+\item[{const int}]{\-\_\-w, }
+\item[{const int}]{\-\_\-h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classNGLScene_ad08cff2eb790203c04862aee6e5432bd}
+
+
+this is called whenever the window is re-\/sized 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-w} & the width of the resized window \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-h} & the height of the resized window \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNGLScene_a9f5e5754ca687a66725e5ec05883ec6c}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!set\-Alignment@{set\-Alignment}}
+\index{set\-Alignment@{set\-Alignment}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{set\-Alignment}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::set\-Alignment (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-align}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classNGLScene_a9f5e5754ca687a66725e5ec05883ec6c}
+
+
+A slot to set alignment. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-align} & the value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNGLScene_a5e08b4415869e9c4cf73c49c02f33948}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!set\-Cohesion@{set\-Cohesion}}
+\index{set\-Cohesion@{set\-Cohesion}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{set\-Cohesion}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::set\-Cohesion (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-cohesion}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classNGLScene_a5e08b4415869e9c4cf73c49c02f33948}
+
+
+A slot to set cohesion weight. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-cohesion} & the value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNGLScene_a412a3b478a7a2838f6c5096fbbd20095}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!set\-Mass@{set\-Mass}}
+\index{set\-Mass@{set\-Mass}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{set\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::set\-Mass (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classNGLScene_a412a3b478a7a2838f6c5096fbbd20095}
+
+
+A slot to set mass. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-mass} & the value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNGLScene_af12eae745b8b0f0b199a98ad4eb59d8c}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!set\-Separation@{set\-Separation}}
+\index{set\-Separation@{set\-Separation}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{set\-Separation}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::set\-Separation (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-separation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classNGLScene_af12eae745b8b0f0b199a98ad4eb59d8c}
+
+
+A slot to set separation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-separation} & the value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNGLScene_aeb6a3e90a1db49beef452ca4c3b92de7}{\index{N\-G\-L\-Scene@{N\-G\-L\-Scene}!set\-Speed@{set\-Speed}}
+\index{set\-Speed@{set\-Speed}!NGLScene@{N\-G\-L\-Scene}}
+\subsubsection[{set\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void N\-G\-L\-Scene\-::set\-Speed (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classNGLScene_aeb6a3e90a1db49beef452ca4c3b92de7}
+
+
+A slot to set speed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-speed} & the value to set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{NGLScene_8h}{N\-G\-L\-Scene.\-h}\item 
+src/N\-G\-L\-Scene.\-cpp\end{DoxyCompactItemize}

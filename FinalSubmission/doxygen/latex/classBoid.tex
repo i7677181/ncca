@@ -1,0 +1,394 @@
+\hypertarget{classBoid}{\section{Boid Class Reference}
+\label{classBoid}\index{Boid@{Boid}}
+}
+
+
+this class contains movement methods and behaviours for the boids  
+
+
+
+
+{\ttfamily \#include $<$Boid.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBoid_a5d1abb62ea2b9f7adc764d648614bf51}{Boid} (int \-\_\-id)
+\begin{DoxyCompactList}\small\item\em ctor \end{DoxyCompactList}\item 
+\hypertarget{classBoid_a712f84ddc1b8ad06ad7ecd6c10a1666c}{\hyperlink{classBoid_a712f84ddc1b8ad06ad7ecd6c10a1666c}{$\sim$\-Boid} ()}\label{classBoid_a712f84ddc1b8ad06ad7ecd6c10a1666c}
+
+\begin{DoxyCompactList}\small\item\em dtor \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_a38026ec733e0e7e705127e3f88f69b99}{set\-Pos} (float \-\_\-x, float \-\_\-y, float \-\_\-z)
+\begin{DoxyCompactList}\small\item\em method to st the boid position \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_a97552481a8c6f43e203d0bc2df083830}{set\-Neighbour} (\hyperlink{classBoid}{Boid} $\ast$boid)
+\begin{DoxyCompactList}\small\item\em method to set a neighbour to the boid \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_aeb1fd57777cec9eab3f735312c2a2599}{clear\-Neighbour} ()
+\begin{DoxyCompactList}\small\item\em method to cclear the boid's neighbours \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_a610fd5764690285c3c81135c30162633}{set\-Velocity} (float \-\_\-x, float \-\_\-y, float \-\_\-z)
+\begin{DoxyCompactList}\small\item\em method to set the boid's velocity \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_af24205fb4e30e0e746c3146c59252fda}{set\-S\-Weight} (int \-\_\-separation\-Weight)
+\begin{DoxyCompactList}\small\item\em method to set the weight on the separation force \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_aa2ace7fb25c823079ebdab97dfefdf28}{set\-C\-Weight} (int \-\_\-cohesion\-Weight)
+\begin{DoxyCompactList}\small\item\em method to set the weight on the cohesion force \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_acc3767ea7aaff905b618aab1dcb8d2e3}{set\-A\-Weight} (int \-\_\-align\-Weight)
+\begin{DoxyCompactList}\small\item\em method to set the weight on the alignment force \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_af9cc5ca3786b7a0c5fa7c6b61d257bde}{set\-Mass} (int \-\_\-mass)
+\begin{DoxyCompactList}\small\item\em method to set the mass of the boid \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_a6a8b730efcf6b98cbf56aaa905bc7508}{set\-Speed} (float \-\_\-speed)
+\begin{DoxyCompactList}\small\item\em method to set the speed of the boid \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_a8b2d2ef70003c3b46c22ec3866f842ec}{set\-Sep\-Dist} (int \-\_\-sep\-Dist)
+\begin{DoxyCompactList}\small\item\em method to set the separation distance \end{DoxyCompactList}\item 
+int \hyperlink{classBoid_ae4d6cb62f1811008b923e1d1bf349430}{get\-Neighbours} () const 
+\begin{DoxyCompactList}\small\item\em method to get the number of neighbours the boid has \end{DoxyCompactList}\item 
+ngl\-::\-Vec3 \hyperlink{classBoid_a8d92ae43f4b135661bb93afd46c90e94}{get\-Position} () const 
+\begin{DoxyCompactList}\small\item\em method to get the position of the boid \end{DoxyCompactList}\item 
+ngl\-::\-Vec3 \hyperlink{classBoid_a9b8109fd5bb93268c2591bf0b87a920d}{get\-Velocity} () const 
+\begin{DoxyCompactList}\small\item\em method to get the velocity of the boid \end{DoxyCompactList}\item 
+\hypertarget{classBoid_a5ff5c09aa0f501a097116a453013986f}{float {\bfseries get\-Radius} () const }\label{classBoid_a5ff5c09aa0f501a097116a453013986f}
+
+\item 
+int \hyperlink{classBoid_a579520e335b6033643531218eae95be0}{get\-Id} () const 
+\begin{DoxyCompactList}\small\item\em method to get the id of a boid \end{DoxyCompactList}\item 
+ngl\-::\-Vec3 \hyperlink{classBoid_aef5f32444ae2ae6fff812cb8272e437f}{get\-Rotation} () const 
+\begin{DoxyCompactList}\small\item\em method to get the x and y rotations of a boid \end{DoxyCompactList}\item 
+int \hyperlink{classBoid_ab474ff0fa3273519a0284bda734d7119}{get\-Search\-Rad} () const 
+\begin{DoxyCompactList}\small\item\em method to get the distance a boid will look for neighbours \end{DoxyCompactList}\item 
+\hypertarget{classBoid_aa2b619d85612051c88b2e7cc67ac0115}{void \hyperlink{classBoid_aa2b619d85612051c88b2e7cc67ac0115}{set\-Steering} ()}\label{classBoid_aa2b619d85612051c88b2e7cc67ac0115}
+
+\begin{DoxyCompactList}\small\item\em method to calculate and set steering force vector \end{DoxyCompactList}\item 
+\hypertarget{classBoid_af0fb09a2a09da233530c37466ca1e2f2}{void \hyperlink{classBoid_af0fb09a2a09da233530c37466ca1e2f2}{set\-Cohesion} ()}\label{classBoid_af0fb09a2a09da233530c37466ca1e2f2}
+
+\begin{DoxyCompactList}\small\item\em method to calculate and set cohesion force vector \end{DoxyCompactList}\item 
+\hypertarget{classBoid_a6f14922235fdd42e64a0b462113d3f16}{void \hyperlink{classBoid_a6f14922235fdd42e64a0b462113d3f16}{set\-Alignment} ()}\label{classBoid_a6f14922235fdd42e64a0b462113d3f16}
+
+\begin{DoxyCompactList}\small\item\em method to calculate and set the alignment force vector \end{DoxyCompactList}\item 
+\hypertarget{classBoid_af68e960efe0425045524acf58d681ffb}{void \hyperlink{classBoid_af68e960efe0425045524acf58d681ffb}{set\-Separation} ()}\label{classBoid_af68e960efe0425045524acf58d681ffb}
+
+\begin{DoxyCompactList}\small\item\em method to calculate and set the separation force vector \end{DoxyCompactList}\item 
+\hypertarget{classBoid_add0e553d230a21b35c6e60d8af5f4b9a}{void \hyperlink{classBoid_add0e553d230a21b35c6e60d8af5f4b9a}{set\-Avoid} ()}\label{classBoid_add0e553d230a21b35c6e60d8af5f4b9a}
+
+\begin{DoxyCompactList}\small\item\em method to calculate and set the avoidance force vector \end{DoxyCompactList}\item 
+void \hyperlink{classBoid_abaf050c8e4f90b41bacaa4ae850d9722}{set\-Reposition} (ngl\-::\-Vec3 \-\_\-reposition)
+\begin{DoxyCompactList}\small\item\em method to calculate and set the reposition force vector \end{DoxyCompactList}\item 
+\hypertarget{classBoid_abc245a74a8c5e124ba98d0d07c5ab01e}{void \hyperlink{classBoid_abc245a74a8c5e124ba98d0d07c5ab01e}{reposition\-Bounds} ()}\label{classBoid_abc245a74a8c5e124ba98d0d07c5ab01e}
+
+\begin{DoxyCompactList}\small\item\em method to calculate and set the reposition force vector away from the walls of the \hyperlink{classSwarm}{Swarm} \end{DoxyCompactList}\item 
+\hypertarget{classBoid_a141b020067545d3c3af45e26084d257f}{void {\bfseries set\-Direction} ()}\label{classBoid_a141b020067545d3c3af45e26084d257f}
+
+\item 
+\hypertarget{classBoid_a9133cb1a761dbbd80a535b4f5576dd00}{void \hyperlink{classBoid_a9133cb1a761dbbd80a535b4f5576dd00}{update\-Position} ()}\label{classBoid_a9133cb1a761dbbd80a535b4f5576dd00}
+
+\begin{DoxyCompactList}\small\item\em method to calculate and set the new position based on the current steering vector, current velocity and speed \end{DoxyCompactList}\item 
+\hypertarget{classBoid_ad84ed9152d035b542921547f289024eb}{void \hyperlink{classBoid_ad84ed9152d035b542921547f289024eb}{move} ()}\label{classBoid_ad84ed9152d035b542921547f289024eb}
+
+\begin{DoxyCompactList}\small\item\em method to move the boid by combining all the steering methods and update\-Position \end{DoxyCompactList}\item 
+\hypertarget{classBoid_a03d008ad343ad4a7d2c6d3ba3c6556ee}{void \hyperlink{classBoid_a03d008ad343ad4a7d2c6d3ba3c6556ee}{set\-Rotate} ()}\label{classBoid_a03d008ad343ad4a7d2c6d3ba3c6556ee}
+
+\begin{DoxyCompactList}\small\item\em method to calculate and set the boid's rotation based on its velocity \end{DoxyCompactList}\item 
+\hypertarget{classBoid_a145b410db5f17eb0896ee48baa769a1c}{void \hyperlink{classBoid_a145b410db5f17eb0896ee48baa769a1c}{Collision} (ngl\-::\-Vec3 \-\_\-pos, float \-\_\-rad)}\label{classBoid_a145b410db5f17eb0896ee48baa769a1c}
+
+\begin{DoxyCompactList}\small\item\em method to check if boids are colliding \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this class contains movement methods and behaviours for the boids 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBoid_a5d1abb62ea2b9f7adc764d648614bf51}{\index{Boid@{Boid}!Boid@{Boid}}
+\index{Boid@{Boid}!Boid@{Boid}}
+\subsubsection[{Boid}]{\setlength{\rightskip}{0pt plus 5cm}Boid\-::\-Boid (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{classBoid_a5d1abb62ea2b9f7adc764d648614bf51}
+
+
+ctor 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-id} & boid I\-D \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBoid_aeb1fd57777cec9eab3f735312c2a2599}{\index{Boid@{Boid}!clear\-Neighbour@{clear\-Neighbour}}
+\index{clear\-Neighbour@{clear\-Neighbour}!Boid@{Boid}}
+\subsubsection[{clear\-Neighbour}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::clear\-Neighbour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBoid_aeb1fd57777cec9eab3f735312c2a2599}
+
+
+method to cclear the boid's neighbours 
+
+\begin{DoxyReturn}{Returns}
+clears m\-\_\-neighbours 
+\end{DoxyReturn}
+\hypertarget{classBoid_a579520e335b6033643531218eae95be0}{\index{Boid@{Boid}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!Boid@{Boid}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Boid\-::get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoid_a579520e335b6033643531218eae95be0}
+
+
+method to get the id of a boid 
+
+\begin{DoxyReturn}{Returns}
+returns m\-\_\-id 
+\end{DoxyReturn}
+\hypertarget{classBoid_ae4d6cb62f1811008b923e1d1bf349430}{\index{Boid@{Boid}!get\-Neighbours@{get\-Neighbours}}
+\index{get\-Neighbours@{get\-Neighbours}!Boid@{Boid}}
+\subsubsection[{get\-Neighbours}]{\setlength{\rightskip}{0pt plus 5cm}int Boid\-::get\-Neighbours (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoid_ae4d6cb62f1811008b923e1d1bf349430}
+
+
+method to get the number of neighbours the boid has 
+
+\begin{DoxyReturn}{Returns}
+returns the size of m\-\_\-neighbours 
+\end{DoxyReturn}
+\hypertarget{classBoid_a8d92ae43f4b135661bb93afd46c90e94}{\index{Boid@{Boid}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!Boid@{Boid}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}ngl\-::\-Vec3 Boid\-::get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoid_a8d92ae43f4b135661bb93afd46c90e94}
+
+
+method to get the position of the boid 
+
+\begin{DoxyReturn}{Returns}
+returns m\-\_\-position 
+\end{DoxyReturn}
+\hypertarget{classBoid_aef5f32444ae2ae6fff812cb8272e437f}{\index{Boid@{Boid}!get\-Rotation@{get\-Rotation}}
+\index{get\-Rotation@{get\-Rotation}!Boid@{Boid}}
+\subsubsection[{get\-Rotation}]{\setlength{\rightskip}{0pt plus 5cm}ngl\-::\-Vec3 Boid\-::get\-Rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoid_aef5f32444ae2ae6fff812cb8272e437f}
+
+
+method to get the x and y rotations of a boid 
+
+\begin{DoxyReturn}{Returns}
+returns a Vec3 of (m\-\_\-pitch, m\-\_\-yaw, 0) 
+\end{DoxyReturn}
+\hypertarget{classBoid_ab474ff0fa3273519a0284bda734d7119}{\index{Boid@{Boid}!get\-Search\-Rad@{get\-Search\-Rad}}
+\index{get\-Search\-Rad@{get\-Search\-Rad}!Boid@{Boid}}
+\subsubsection[{get\-Search\-Rad}]{\setlength{\rightskip}{0pt plus 5cm}int Boid\-::get\-Search\-Rad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoid_ab474ff0fa3273519a0284bda734d7119}
+
+
+method to get the distance a boid will look for neighbours 
+
+\begin{DoxyReturn}{Returns}
+returns m\-\_\-search\-Rad 
+\end{DoxyReturn}
+\hypertarget{classBoid_a9b8109fd5bb93268c2591bf0b87a920d}{\index{Boid@{Boid}!get\-Velocity@{get\-Velocity}}
+\index{get\-Velocity@{get\-Velocity}!Boid@{Boid}}
+\subsubsection[{get\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}ngl\-::\-Vec3 Boid\-::get\-Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoid_a9b8109fd5bb93268c2591bf0b87a920d}
+
+
+method to get the velocity of the boid 
+
+\begin{DoxyReturn}{Returns}
+returns m\-\_\-velocity 
+\end{DoxyReturn}
+\hypertarget{classBoid_acc3767ea7aaff905b618aab1dcb8d2e3}{\index{Boid@{Boid}!set\-A\-Weight@{set\-A\-Weight}}
+\index{set\-A\-Weight@{set\-A\-Weight}!Boid@{Boid}}
+\subsubsection[{set\-A\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-A\-Weight (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-align\-Weight}
+\end{DoxyParamCaption}
+)}}\label{classBoid_acc3767ea7aaff905b618aab1dcb8d2e3}
+
+
+method to set the weight on the alignment force 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-align\-Weight} & the weight value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBoid_aa2ace7fb25c823079ebdab97dfefdf28}{\index{Boid@{Boid}!set\-C\-Weight@{set\-C\-Weight}}
+\index{set\-C\-Weight@{set\-C\-Weight}!Boid@{Boid}}
+\subsubsection[{set\-C\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-C\-Weight (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-cohesion\-Weight}
+\end{DoxyParamCaption}
+)}}\label{classBoid_aa2ace7fb25c823079ebdab97dfefdf28}
+
+
+method to set the weight on the cohesion force 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-cohesion\-Weight} & the weight value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBoid_af9cc5ca3786b7a0c5fa7c6b61d257bde}{\index{Boid@{Boid}!set\-Mass@{set\-Mass}}
+\index{set\-Mass@{set\-Mass}!Boid@{Boid}}
+\subsubsection[{set\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-Mass (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-mass}
+\end{DoxyParamCaption}
+)}}\label{classBoid_af9cc5ca3786b7a0c5fa7c6b61d257bde}
+
+
+method to set the mass of the boid 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-mass} & the value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBoid_a97552481a8c6f43e203d0bc2df083830}{\index{Boid@{Boid}!set\-Neighbour@{set\-Neighbour}}
+\index{set\-Neighbour@{set\-Neighbour}!Boid@{Boid}}
+\subsubsection[{set\-Neighbour}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-Neighbour (
+\begin{DoxyParamCaption}
+\item[{{\bf Boid} $\ast$}]{boid}
+\end{DoxyParamCaption}
+)}}\label{classBoid_a97552481a8c6f43e203d0bc2df083830}
+
+
+method to set a neighbour to the boid 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em boid} & the neighbouring boid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+appends boid to m\-\_\-neighbours 
+\end{DoxyReturn}
+\hypertarget{classBoid_a38026ec733e0e7e705127e3f88f69b99}{\index{Boid@{Boid}!set\-Pos@{set\-Pos}}
+\index{set\-Pos@{set\-Pos}!Boid@{Boid}}
+\subsubsection[{set\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-Pos (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-x, }
+\item[{float}]{\-\_\-y, }
+\item[{float}]{\-\_\-z}
+\end{DoxyParamCaption}
+)}}\label{classBoid_a38026ec733e0e7e705127e3f88f69b99}
+
+
+method to st the boid position 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-x} & the x value ot be set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-y} & the y value ot be set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-z} & the z value ot be set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBoid_abaf050c8e4f90b41bacaa4ae850d9722}{\index{Boid@{Boid}!set\-Reposition@{set\-Reposition}}
+\index{set\-Reposition@{set\-Reposition}!Boid@{Boid}}
+\subsubsection[{set\-Reposition}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-Reposition (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-reposition}
+\end{DoxyParamCaption}
+)}}\label{classBoid_abaf050c8e4f90b41bacaa4ae850d9722}
+
+
+method to calculate and set the reposition force vector 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-reposition} & the point to reposition from \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBoid_a8b2d2ef70003c3b46c22ec3866f842ec}{\index{Boid@{Boid}!set\-Sep\-Dist@{set\-Sep\-Dist}}
+\index{set\-Sep\-Dist@{set\-Sep\-Dist}!Boid@{Boid}}
+\subsubsection[{set\-Sep\-Dist}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-Sep\-Dist (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-sep\-Dist}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBoid_a8b2d2ef70003c3b46c22ec3866f842ec}
+
+
+method to set the separation distance 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-sep\-Dist} & the value to be set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBoid_a6a8b730efcf6b98cbf56aaa905bc7508}{\index{Boid@{Boid}!set\-Speed@{set\-Speed}}
+\index{set\-Speed@{set\-Speed}!Boid@{Boid}}
+\subsubsection[{set\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-speed}
+\end{DoxyParamCaption}
+)}}\label{classBoid_a6a8b730efcf6b98cbf56aaa905bc7508}
+
+
+method to set the speed of the boid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-speed} & the speed value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBoid_af24205fb4e30e0e746c3146c59252fda}{\index{Boid@{Boid}!set\-S\-Weight@{set\-S\-Weight}}
+\index{set\-S\-Weight@{set\-S\-Weight}!Boid@{Boid}}
+\subsubsection[{set\-S\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-S\-Weight (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-separation\-Weight}
+\end{DoxyParamCaption}
+)}}\label{classBoid_af24205fb4e30e0e746c3146c59252fda}
+
+
+method to set the weight on the separation force 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-separation\-Weight} & the weight value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBoid_a610fd5764690285c3c81135c30162633}{\index{Boid@{Boid}!set\-Velocity@{set\-Velocity}}
+\index{set\-Velocity@{set\-Velocity}!Boid@{Boid}}
+\subsubsection[{set\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Boid\-::set\-Velocity (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-x, }
+\item[{float}]{\-\_\-y, }
+\item[{float}]{\-\_\-z}
+\end{DoxyParamCaption}
+)}}\label{classBoid_a610fd5764690285c3c81135c30162633}
+
+
+method to set the boid's velocity 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-x} & the x value ot be set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-y} & the y value ot be set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-z} & the z value ot be set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Boid_8h}{Boid.\-h}\item 
+src/Boid.\-cpp\end{DoxyCompactItemize}

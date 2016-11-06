@@ -1,0 +1,147 @@
+\hypertarget{classSwarm}{\section{Swarm Class Reference}
+\label{classSwarm}\index{Swarm@{Swarm}}
+}
+
+
+a class for creating the swarm, managing boids and their neighbours  
+
+
+
+
+{\ttfamily \#include $<$Swarm.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSwarm_af3423d580972ffbe9a1b7befb8d75caf}{Swarm} (int \-\_\-num\-Boids)
+\begin{DoxyCompactList}\small\item\em ctor \end{DoxyCompactList}\item 
+\hyperlink{classSwarm_ac2a239ad48e9d468b8d6de0f321dbabb}{Swarm} (int \-\_\-num\-Boids, int \-\_\-cohesion, int \-\_\-separation, int \-\_\-alignment, float \-\_\-speed, int \-\_\-mass)
+\begin{DoxyCompactList}\small\item\em ctor to set custom steering force weights, speed and mass as well as the number of boids \end{DoxyCompactList}\item 
+\hypertarget{classSwarm_a5d74bf7e768edf0d8930ba187005a583}{\hyperlink{classSwarm_a5d74bf7e768edf0d8930ba187005a583}{$\sim$\-Swarm} ()}\label{classSwarm_a5d74bf7e768edf0d8930ba187005a583}
+
+\begin{DoxyCompactList}\small\item\em dtor \end{DoxyCompactList}\item 
+void \hyperlink{classSwarm_aaf270a2467917858d8f8a636c04783e7}{create\-Swarm} (int \-\_\-cohesion, int \-\_\-separation, int \-\_\-alignment, float \-\_\-speed, int \-\_\-mass)
+\begin{DoxyCompactList}\small\item\em method to add a boid to the swarm \end{DoxyCompactList}\item 
+\hypertarget{classSwarm_a69fc2af93e0ec34bdcd309f34e7be3ab}{void \hyperlink{classSwarm_a69fc2af93e0ec34bdcd309f34e7be3ab}{remove\-Boid} ()}\label{classSwarm_a69fc2af93e0ec34bdcd309f34e7be3ab}
+
+\begin{DoxyCompactList}\small\item\em method to remove a boid from the swarm \end{DoxyCompactList}\item 
+void \hyperlink{classSwarm_a2edf4a7143b520b4390e2f7fe948c843}{set\-Neighbours} (int \-\_\-id)
+\begin{DoxyCompactList}\small\item\em method to st the boid position \end{DoxyCompactList}\item 
+\hypertarget{classSwarm_a21bce2e4048f0ed95f91544069d4a009}{int \hyperlink{classSwarm_a21bce2e4048f0ed95f91544069d4a009}{get\-Size} ()}\label{classSwarm_a21bce2e4048f0ed95f91544069d4a009}
+
+\begin{DoxyCompactList}\small\item\em method to return the size of the swarm \end{DoxyCompactList}\item 
+\hypertarget{classSwarm_adae7b2b5b76d18fe5c3d3118515b48c9}{void \hyperlink{classSwarm_adae7b2b5b76d18fe5c3d3118515b48c9}{update\-Swarm} ()}\label{classSwarm_adae7b2b5b76d18fe5c3d3118515b48c9}
+
+\begin{DoxyCompactList}\small\item\em method to update the swarm, neighbours, collisions and positions of the boids \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSwarm_a43829aa093ffd59ebc2c759667674428}{std\-::vector$<$ \hyperlink{classBoid}{Boid} $>$ \hyperlink{classSwarm_a43829aa093ffd59ebc2c759667674428}{m\-\_\-swarm}}\label{classSwarm_a43829aa093ffd59ebc2c759667674428}
+
+\begin{DoxyCompactList}\small\item\em vector to contain all boids within the swarm \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a class for creating the swarm, managing boids and their neighbours 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSwarm_af3423d580972ffbe9a1b7befb8d75caf}{\index{Swarm@{Swarm}!Swarm@{Swarm}}
+\index{Swarm@{Swarm}!Swarm@{Swarm}}
+\subsubsection[{Swarm}]{\setlength{\rightskip}{0pt plus 5cm}Swarm\-::\-Swarm (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-num\-Boids}
+\end{DoxyParamCaption}
+)}}\label{classSwarm_af3423d580972ffbe9a1b7befb8d75caf}
+
+
+ctor 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-num\-Boids} & the number of boids in the swarm \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSwarm_ac2a239ad48e9d468b8d6de0f321dbabb}{\index{Swarm@{Swarm}!Swarm@{Swarm}}
+\index{Swarm@{Swarm}!Swarm@{Swarm}}
+\subsubsection[{Swarm}]{\setlength{\rightskip}{0pt plus 5cm}Swarm\-::\-Swarm (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-num\-Boids, }
+\item[{int}]{\-\_\-cohesion, }
+\item[{int}]{\-\_\-separation, }
+\item[{int}]{\-\_\-alignment, }
+\item[{float}]{\-\_\-speed, }
+\item[{int}]{\-\_\-mass}
+\end{DoxyParamCaption}
+)}}\label{classSwarm_ac2a239ad48e9d468b8d6de0f321dbabb}
+
+
+ctor to set custom steering force weights, speed and mass as well as the number of boids 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-num\-Boids} & the number of boids in the swarm \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-cohesion} & the custom cohesion force weight to set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-separation} & the custom spearation force weight to set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-alignment} & the custom alignment force weight to set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-speed} & the custom speed value to be set \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-mass} & the custom mass value to be set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSwarm_aaf270a2467917858d8f8a636c04783e7}{\index{Swarm@{Swarm}!create\-Swarm@{create\-Swarm}}
+\index{create\-Swarm@{create\-Swarm}!Swarm@{Swarm}}
+\subsubsection[{create\-Swarm}]{\setlength{\rightskip}{0pt plus 5cm}void Swarm\-::create\-Swarm (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-cohesion, }
+\item[{int}]{\-\_\-separation, }
+\item[{int}]{\-\_\-alignment, }
+\item[{float}]{\-\_\-speed, }
+\item[{int}]{\-\_\-mass}
+\end{DoxyParamCaption}
+)}}\label{classSwarm_aaf270a2467917858d8f8a636c04783e7}
+
+
+method to add a boid to the swarm 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-cohesion} & the cohesion force weight to set to the boid \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-separation} & the spearation force weight to set to the boid \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-alignment} & the alignment force weight to set to the boid \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-speed} & the speed value to set to the boid \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-mass} & the mass value to set to the boid \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSwarm_a2edf4a7143b520b4390e2f7fe948c843}{\index{Swarm@{Swarm}!set\-Neighbours@{set\-Neighbours}}
+\index{set\-Neighbours@{set\-Neighbours}!Swarm@{Swarm}}
+\subsubsection[{set\-Neighbours}]{\setlength{\rightskip}{0pt plus 5cm}void Swarm\-::set\-Neighbours (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{classSwarm_a2edf4a7143b520b4390e2f7fe948c843}
+
+
+method to st the boid position 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-id} & the id of the boid to set neighbours to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Swarm_8h}{Swarm.\-h}\item 
+src/Swarm.\-cpp\end{DoxyCompactItemize}

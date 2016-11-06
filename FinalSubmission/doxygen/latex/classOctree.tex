@@ -1,0 +1,166 @@
+\hypertarget{classOctree}{\section{Octree Class Reference}
+\label{classOctree}\index{Octree@{Octree}}
+}
+
+
+I have used this class for finding the neighbours of a boid in my swarming system. I have made small modification from the original class such as removing methods which were not necesarrily needed for the calculations.  
+
+
+
+
+{\ttfamily \#include $<$Octree.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOctree_a18c97528102fc6c7b0afcf62d4256d6b}{Octree} (ngl\-::\-Vec3 \-\_\-origin, float \-\_\-half\-D, int \-\_\-height)
+\begin{DoxyCompactList}\small\item\em ctor \end{DoxyCompactList}\item 
+\hypertarget{classOctree_a6705a6ae06fab5a0dfdd79f45576020d}{\hyperlink{classOctree_a6705a6ae06fab5a0dfdd79f45576020d}{$\sim$\-Octree} ()}\label{classOctree_a6705a6ae06fab5a0dfdd79f45576020d}
+
+\begin{DoxyCompactList}\small\item\em dtor recursivley destroys octants \end{DoxyCompactList}\item 
+void \hyperlink{classOctree_a5e902807821df11683179aea5e43d731}{set\-Data} (ngl\-::\-Vec4 \-\_\-data)
+\begin{DoxyCompactList}\small\item\em sets the m\-\_\-data member variable \end{DoxyCompactList}\item 
+int \hyperlink{classOctree_adb4be848e01fce3568b83cd8a4117e26}{get\-Octant\-Containing\-Point} (ngl\-::\-Vec3 point)
+\begin{DoxyCompactList}\small\item\em Determine which octant of the tree contains \char`\"{}point\char`\"{}. \end{DoxyCompactList}\item 
+bool \hyperlink{classOctree_a5311ba068ebb82dbc917e0178f052ec0}{is\-Leaf} ()
+\begin{DoxyCompactList}\small\item\em checks whether the current node is a leaf node \end{DoxyCompactList}\item 
+void \hyperlink{classOctree_a9a1092104eeea9725e66ae188b8db736}{insert} (ngl\-::\-Vec4 \-\_\-data)
+\begin{DoxyCompactList}\small\item\em if this node doesnt have a data point; insert one or if is does; split this node into 8 children and insert old and new data points \end{DoxyCompactList}\item 
+ngl\-::\-Vec4 \hyperlink{classOctree_a814ed4196b414829c44f55c8b65a7517}{get\-Points\-Inside\-Sphere} (ngl\-::\-Vec3 centre, float radius)
+\begin{DoxyCompactList}\small\item\em query the tree for points within a bounding sphere \end{DoxyCompactList}\item 
+\hypertarget{classOctree_aca0adcb1047b4ced99f1e3449ac88036}{void \hyperlink{classOctree_aca0adcb1047b4ced99f1e3449ac88036}{clear\-Results} ()}\label{classOctree_aca0adcb1047b4ced99f1e3449ac88036}
+
+\begin{DoxyCompactList}\small\item\em resets m\-\_\-results\-Data \end{DoxyCompactList}\item 
+\hypertarget{classOctree_a6ac1e8420a5b02c854e8ebcf8e18a401}{void \hyperlink{classOctree_a6ac1e8420a5b02c854e8ebcf8e18a401}{build\-V\-A\-O} ()}\label{classOctree_a6ac1e8420a5b02c854e8ebcf8e18a401}
+
+\begin{DoxyCompactList}\small\item\em builds a simple V\-A\-O object of the octrree for visualisation purposes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classOctree_a6260225ce5323751e8053cfd4597f2cd}{std\-::vector$<$ ngl\-::\-Vec4 $>$ \hyperlink{classOctree_a6260225ce5323751e8053cfd4597f2cd}{m\-\_\-results\-Data}}\label{classOctree_a6260225ce5323751e8053cfd4597f2cd}
+
+\begin{DoxyCompactList}\small\item\em resets m\-\_\-results\-Data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I have used this class for finding the neighbours of a boid in my swarming system. I have made small modification from the original class such as removing methods which were not necesarrily needed for the calculations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classOctree_a18c97528102fc6c7b0afcf62d4256d6b}{\index{Octree@{Octree}!Octree@{Octree}}
+\index{Octree@{Octree}!Octree@{Octree}}
+\subsubsection[{Octree}]{\setlength{\rightskip}{0pt plus 5cm}Octree\-::\-Octree (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-origin, }
+\item[{float}]{\-\_\-half\-D, }
+\item[{int}]{\-\_\-height}
+\end{DoxyParamCaption}
+)}}\label{classOctree_a18c97528102fc6c7b0afcf62d4256d6b}
+
+
+ctor 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-origin} & the physical centre of the node \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-half\-D} & half the width, depth, or height of the node \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-height} & the height of the octree \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classOctree_adb4be848e01fce3568b83cd8a4117e26}{\index{Octree@{Octree}!get\-Octant\-Containing\-Point@{get\-Octant\-Containing\-Point}}
+\index{get\-Octant\-Containing\-Point@{get\-Octant\-Containing\-Point}!Octree@{Octree}}
+\subsubsection[{get\-Octant\-Containing\-Point}]{\setlength{\rightskip}{0pt plus 5cm}int Octree\-::get\-Octant\-Containing\-Point (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{point}
+\end{DoxyParamCaption}
+)}}\label{classOctree_adb4be848e01fce3568b83cd8a4117e26}
+
+
+Determine which octant of the tree contains \char`\"{}point\char`\"{}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em point} & the point to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int denoting the octant containing \char`\"{}point\char`\"{} 
+\end{DoxyReturn}
+\hypertarget{classOctree_a814ed4196b414829c44f55c8b65a7517}{\index{Octree@{Octree}!get\-Points\-Inside\-Sphere@{get\-Points\-Inside\-Sphere}}
+\index{get\-Points\-Inside\-Sphere@{get\-Points\-Inside\-Sphere}!Octree@{Octree}}
+\subsubsection[{get\-Points\-Inside\-Sphere}]{\setlength{\rightskip}{0pt plus 5cm}ngl\-::\-Vec4 Octree\-::get\-Points\-Inside\-Sphere (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{centre, }
+\item[{float}]{radius}
+\end{DoxyParamCaption}
+)}}\label{classOctree_a814ed4196b414829c44f55c8b65a7517}
+
+
+query the tree for points within a bounding sphere 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em centre} & the centre of the bounding sphere \\
+\hline
+\mbox{\tt in}  & {\em radius} & the radius of the bounding sphere \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns and appends the points inside the bounding sphere to m\-\_\-results\-Data 
+\end{DoxyReturn}
+\hypertarget{classOctree_a9a1092104eeea9725e66ae188b8db736}{\index{Octree@{Octree}!insert@{insert}}
+\index{insert@{insert}!Octree@{Octree}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void Octree\-::insert (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec4}]{\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{classOctree_a9a1092104eeea9725e66ae188b8db736}
+
+
+if this node doesnt have a data point; insert one or if is does; split this node into 8 children and insert old and new data points 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-data} & the data to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{classOctree_a5311ba068ebb82dbc917e0178f052ec0}{\index{Octree@{Octree}!is\-Leaf@{is\-Leaf}}
+\index{is\-Leaf@{is\-Leaf}!Octree@{Octree}}
+\subsubsection[{is\-Leaf}]{\setlength{\rightskip}{0pt plus 5cm}bool Octree\-::is\-Leaf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classOctree_a5311ba068ebb82dbc917e0178f052ec0}
+
+
+checks whether the current node is a leaf node 
+
+\begin{DoxyReturn}{Returns}
+true if node is leaf or false if not 
+\end{DoxyReturn}
+\hypertarget{classOctree_a5e902807821df11683179aea5e43d731}{\index{Octree@{Octree}!set\-Data@{set\-Data}}
+\index{set\-Data@{set\-Data}!Octree@{Octree}}
+\subsubsection[{set\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Octree\-::set\-Data (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec4}]{\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{classOctree_a5e902807821df11683179aea5e43d731}
+
+
+sets the m\-\_\-data member variable 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-data} & the data to assign to m\-\_\-data \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Octree_8h}{Octree.\-h}\item 
+src/Octree.\-cpp\end{DoxyCompactItemize}

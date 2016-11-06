@@ -1,0 +1,106 @@
+\hypertarget{classBoidMath}{\section{Boid\-Math Class Reference}
+\label{classBoidMath}\index{Boid\-Math@{Boid\-Math}}
+}
+
+
+this class calculates the distance between the boids  
+
+
+
+
+{\ttfamily \#include $<$Boid\-Math.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBoidMath_a96f701b19a18f2a07372f5eb50548e99}{Boid\-Math} ()
+\begin{DoxyCompactList}\small\item\em ctor \end{DoxyCompactList}\item 
+\hyperlink{classBoidMath_a1b7dfa1c968c08d4ed9ba03be75d91e0}{$\sim$\-Boid\-Math} ()
+\begin{DoxyCompactList}\small\item\em ctor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \hyperlink{classBoidMath_a1aaae5ede2b0287d2426a7a8d86adbd2}{distance} (ngl\-::\-Vec3 a, ngl\-::\-Vec3 b)
+\begin{DoxyCompactList}\small\item\em method to calculate the distance between the boids in the swarm \end{DoxyCompactList}\item 
+\hypertarget{classBoidMath_a555606e357d0021da57236ad97656d86}{static bool \hyperlink{classBoidMath_a555606e357d0021da57236ad97656d86}{collision\-Detect} (ngl\-::\-Vec3 ahead, ngl\-::\-Vec3 a, ngl\-::\-Vec3 b, float radius)}\label{classBoidMath_a555606e357d0021da57236ad97656d86}
+
+\begin{DoxyCompactList}\small\item\em method to calculate detect if a collision has occured \end{DoxyCompactList}\item 
+static bool \hyperlink{classBoidMath_a10348823145de6823516c6a78df0075d}{box\-Intersects\-Sphere} (ngl\-::\-Vec3 b\-Min, ngl\-::\-Vec3 b\-Max, ngl\-::\-Vec3 C, float r)
+\begin{DoxyCompactList}\small\item\em query if a box intersects with a sphere \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this class calculates the distance between the boids 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBoidMath_a96f701b19a18f2a07372f5eb50548e99}{\index{Boid\-Math@{Boid\-Math}!Boid\-Math@{Boid\-Math}}
+\index{Boid\-Math@{Boid\-Math}!BoidMath@{Boid\-Math}}
+\subsubsection[{Boid\-Math}]{\setlength{\rightskip}{0pt plus 5cm}Boid\-Math\-::\-Boid\-Math (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBoidMath_a96f701b19a18f2a07372f5eb50548e99}
+
+
+ctor 
+
+ctr \hypertarget{classBoidMath_a1b7dfa1c968c08d4ed9ba03be75d91e0}{\index{Boid\-Math@{Boid\-Math}!$\sim$\-Boid\-Math@{$\sim$\-Boid\-Math}}
+\index{$\sim$\-Boid\-Math@{$\sim$\-Boid\-Math}!BoidMath@{Boid\-Math}}
+\subsubsection[{$\sim$\-Boid\-Math}]{\setlength{\rightskip}{0pt plus 5cm}Boid\-Math\-::$\sim$\-Boid\-Math (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBoidMath_a1b7dfa1c968c08d4ed9ba03be75d91e0}
+
+
+ctor 
+
+dtr 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBoidMath_a10348823145de6823516c6a78df0075d}{\index{Boid\-Math@{Boid\-Math}!box\-Intersects\-Sphere@{box\-Intersects\-Sphere}}
+\index{box\-Intersects\-Sphere@{box\-Intersects\-Sphere}!BoidMath@{Boid\-Math}}
+\subsubsection[{box\-Intersects\-Sphere}]{\setlength{\rightskip}{0pt plus 5cm}bool Boid\-Math\-::box\-Intersects\-Sphere (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{b\-Min, }
+\item[{ngl\-::\-Vec3}]{b\-Max, }
+\item[{ngl\-::\-Vec3}]{C, }
+\item[{float}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBoidMath_a10348823145de6823516c6a78df0075d}
+
+
+query if a box intersects with a sphere 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em b\-Min} & the minimum corner of the box \\
+\hline
+\mbox{\tt in}  & {\em b\-Max} & the maximum corner of the box \\
+\hline
+\mbox{\tt in}  & {\em C} & the centre of the sphere \\
+\hline
+\mbox{\tt in}  & {\em r} & the radius of the circle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if box intersects with sphere, false if not 
+\end{DoxyReturn}
+\hypertarget{classBoidMath_a1aaae5ede2b0287d2426a7a8d86adbd2}{\index{Boid\-Math@{Boid\-Math}!distance@{distance}}
+\index{distance@{distance}!BoidMath@{Boid\-Math}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}float Boid\-Math\-::distance (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{a, }
+\item[{ngl\-::\-Vec3}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBoidMath_a1aaae5ede2b0287d2426a7a8d86adbd2}
+
+
+method to calculate the distance between the boids in the swarm 
+
+calculate the magnitude/distance between two points to determine collision or if a neighbour is within radius of boid 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{BoidMath_8h}{Boid\-Math.\-h}\item 
+src/Boidmath.\-cpp\end{DoxyCompactItemize}
