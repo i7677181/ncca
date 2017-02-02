@@ -1,3 +1,3 @@
-# i7677181-CA1
-CA1 created for i7677181
-simple swarm system
+
+Simple Swarm System based on Craig Reynolds Boids method
+using OpenGL/ngl
